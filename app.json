@@ -24,6 +24,7 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "A loyalty app made by Akash Soti and Sachin Bhakar"
   }
 }
