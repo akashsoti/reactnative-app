@@ -9,7 +9,6 @@ import {
   View,
 } from 'react-native';
 import { WebBrowser } from 'expo';
-
 import { MonoText } from '../components/StyledText';
 
 export default class HomeScreen extends React.Component {
@@ -20,29 +19,42 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.header}>
-          The Beer Affair, Jaipur
-        </Text>
-        <Text style={styles.loyaltyPoint}>
-          Your loyalty point are 100
-        </Text>
+        <View style={styles.containerCol}>
+          <Image source={require('../assets/images/logo.png')} style={styles.logo} />
+          <Text style={styles.header}>
+            Loyalty Program
+          </Text>
+        </View>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  containerCol: {
+    flexDirection: 'row',
+    backgroundColor: '#fff',
+    justifyContent: 'center', 
+    alignItems: 'center',
+    paddingTop: 20,
+    paddingBottom: 20,
+  },
   container: {
+    height: 10,
     flex: 1,
     backgroundColor: '#fff',
   },
   header: {
     fontSize: 24,
-    paddingTop: 20,
-    paddingBottom: 20,
+    paddingLeft: 20,
     textAlign: 'center',
+    fontWeight: 'bold',
   },
   loyaltyPoint: {
     fontSize: 16,
   },
+  logo: {
+    width: 50,
+    height: 50,
+  }
 });
